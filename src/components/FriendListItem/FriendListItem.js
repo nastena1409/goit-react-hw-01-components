@@ -15,3 +15,13 @@ export default function FriendListItem ({ avatar, name, isOnline }) {
         </Item>
     )
 }
+
+FriendListItem.propTypes = {
+    friends: PropTypes.arrayOf(
+        PropTypes.exact({
+            avatar: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            isOnline: PropTypes.bool.isRequired
+        })
+    ),
+};
