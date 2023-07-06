@@ -31,3 +31,14 @@ export default function TransactionHistory({ items }) {
 </Table>
     )
 }
+
+TransactionHistory.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.string.isRequired,
+            type: PropTypes.string.isRequired,
+            amount: PropTypes.bool.isRequired,
+            currency: PropTypes.bool.isRequired
+        })
+    ),
+};

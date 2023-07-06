@@ -10,3 +10,11 @@ export default function Transaction({ type, amount, currency }) {
         </Row>  
     )    
 }
+
+Transaction.propTypes = {
+        data: PropTypes.exact({
+            type: PropTypes.string.isRequired,
+            amount: PropTypes.string.isRequired,
+            currency: PropTypes.string.isRequired
+        })
+};
